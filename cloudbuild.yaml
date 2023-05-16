@@ -2,4 +2,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/proyecto-anid-sequia/sysadmin:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/proyecto-anid-sequia/sysadmin:$SHORT_SHA']
+  args: ["push", "gcr.io/proyecto-anid-sequia/sysadmin:$SHORT_SHA"]
