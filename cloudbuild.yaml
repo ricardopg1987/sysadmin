@@ -3,19 +3,19 @@ steps:
   args:
     - 'build'
     - '-t'
-    - 'gcr.io/proyecto-anid-sequia/sysadmin:$SHORT_SHA'
+    - 'gcr.io/proyecto-anid-sequia/github.com/ricardopg1987/alaprimera:$SHORT_SHA'
     - '.'
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'push'
-    - 'gcr.io/proyecto-anid-sequia/sysadmin:$SHORT_SHA'
+    - 'gcr.io/proyecto-anid-sequia/github.com/ricardopg1987/alaprimera:$SHORT_SHA'
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - 'beta'
     - 'run'
     - 'deploy'
-    - 'proyectoanidsequia'
-    - '--image=gcr.io/proyecto-anid-sequia/sysadmin:$SHORT_SHA'
+    - 'alaprimera'
+    - '--image=gcr.io/proyecto-anid-sequia/github.com/ricardopg1987/alaprimera:$SHORT_SHA'
     - '--region=us-central1'
     - '--allow-unauthenticated'
 
