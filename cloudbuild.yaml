@@ -9,7 +9,7 @@ steps:
       'beta',
       'run',
       'deploy',
-      'proyecto-anid-sequia',
+      'gcr.io/proyecto-anid-sequia',
       '--image=gcr.io/proyecto-anid-sequia/sysadmin:$SHORT_SHA',
       '--region=us-central1',
      ]
